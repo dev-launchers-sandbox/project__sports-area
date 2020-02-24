@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css?family=Holtwood+One+SC&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Abel&display=swap");
+
+.App {
+  background-color: lightblue;
+  font-family: sans-serif;
+  font-family: "Abel", sans-serif;
+  text-align: left;
+  font-weight: bold;
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  font-family: "Holtwood One SC", serif;
+  line-height: 1em;
+  text-align: center;
+  color: black;
+}
+h3 {
+  color: black;
+}
+h2 {
+  font-family: "Holtwood One SC", serif;
+}
+p {
+  color: black;
+}
+button {
+  height: 50px;
+  width: 25%;
+  font-size: 16px;
+  background-color: blue;
+  color: black;
+  border: solid black;
+}
+.Continue {
+  text-align: center;
+}
+.Welcome {
+  text-align: center;
+}
