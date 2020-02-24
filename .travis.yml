@@ -1,0 +1,25 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+  - node_modules
+script:
+  - CI=false npm run build
+deploy:
+  #master -> release branch deployment
+  - provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    keep_history: true
+    repo: dev-launchers/$REPO_NAME
+    target_branch: master
+    on:
+      branch: release
+  # deploy Github page to gh-pages branch
+  - provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    local_dir: build
+    on:
+      branch: master
