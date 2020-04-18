@@ -2,26 +2,33 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./styles.css";
 
-import Header from "./components/common/Header";
-import PageBody from "./components/common/PageBody";
+import Header from "./components/common/Header/Header.js";
+import HomePage from "./components/pages/HomePage/HomePage.js";
+import Footer from "./components/common/Footer/Footer";
+import SelectionPage from "./components/pages/SelectionPage/SelectionPage.js";
+import LogInPage from "./components/pages/LogInPage/LogInPage.js";
 
-function App() {
-  return (
-    <div className="App">
-      <Header />
-      <PageBody>
-        <br />
-        <hr />
-        <div className="Welcome">
-          <h3>Get Notified everytime your team scores! </h3>
-        </div>
-        <hr />
-        <div className="Continue">
-          <button onClick="getStarted()">Get Started!</button>
-        </div>
-      </PageBody>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { page: 1 };
+    this.nextPage = this.nextPage.bind(this);
+  }
+  nextPage() {
+    this.setState({ page: this.state.page + 1 });
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        {this.state.page === 1 && <HomePage nextPage={this.nextPage} />}
+        {this.state.page === 2 && <LogInPage nextPage={this.nextPage} />}
+        {this.state.page === 3 && <SelectionPage nextPage={this.nextPage} />}
+        <Footer />
+      </div>
+    );
+  }
 }
 
 const rootElement = document.getElementById("root");

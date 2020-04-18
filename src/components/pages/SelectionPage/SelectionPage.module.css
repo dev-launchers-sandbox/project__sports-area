@@ -1,0 +1,23 @@
+.SelectTeams {
+  text-align: center;
+}
+.doneButton {
+  left: 42.5%;
+  bottom: 40px;
+  position: fixed;
+  height: 60px;
+  width: 15%;
+  font-size: 20px;
+  background-color: blue;
+  color: black;
+  border: solid black;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+}
+.doneButton:hover {
+  transform: scale(1.125);
+  box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}

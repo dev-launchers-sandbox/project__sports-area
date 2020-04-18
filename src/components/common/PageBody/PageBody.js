@@ -1,12 +1,8 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
 import style from "./PageBody.module.css";
 
-export default class Header extends React.Component {
-  constructor() {
-    super();
-  }
+export default class PageBody extends React.Component {
   render() {
     return (
       <div>

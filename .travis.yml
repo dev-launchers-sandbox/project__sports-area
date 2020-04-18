@@ -7,7 +7,7 @@ cache:
 script:
   - CI=false npm run build
 deploy:
-  #master -> release branch deployment
+  master -> release branch deployment
   - provider: pages
     skip_cleanup: true
     github_token: $GITHUB_TOKEN
