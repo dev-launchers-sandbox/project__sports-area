@@ -22,6 +22,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
+        <h1> Hello </h1>
         {this.state.page === 1 && <HomePage nextPage={this.nextPage} />}
         {this.state.page === 2 && <LogInPage nextPage={this.nextPage} />}
         {this.state.page === 3 && <SelectionPage nextPage={this.nextPage} />}
